@@ -1,0 +1,361 @@
+{
+    "badge": {
+        "badges": "View your Profile.",
+        "gyms": "View all the Gym Leaders.",
+        "sbadges": "View all the Badges.",
+        "glrole": "Add a Gym Leader role.",
+        "elrole": "Add a Elite role.",
+        "badgen": "Add a new badge.",
+        "leaderadd": "Add a Gym Leader.",
+        "leaderremove": "Remove a Gym Leader.",
+        "award": "Award a Gym Badge.",
+        "revoke": "Revoke a Gym Badge.",
+        "badgelb": "Check the server's Leaderboard of Badges",
+        "streaka": "Add a Elite Streak.",
+        "streakr": "Remove all Elite Streak.",
+        "badgereset": "Erase all badges data.",
+        "cat": "cat",
+        "drop": true
+    },
+    "game": {
+        "gg": "A basic guessing text-based game.",
+        "tic-tac-toe": "Play Tic-Tac-Toe.",
+        "rock-paper-scissors": "Play Rock-Paper-Scissors.",
+        "cat": "cat",
+        "drop": true
+    },
+    "music": {
+        "Join": "Summons the bot to a voice channel.",
+        "Leave": "Clears the queue and leaves the voice channel.",
+        "Play": "Plays a song.",
+        "Pause": "Pauses the currently playing song.",
+        "Resume": "Resumes a currently paused song.",
+        "Now": "Displays the currently playing song.",
+        "Stop": "Stops playing song and clears the queue.",
+        "Skip": "Skip to next song.",
+        "Queue": "Shows the player's queue.",
+        "Shuffle": "Shuffles the queue.",
+        "Remove": "Removes a song from the queue.",
+        "Loop": "Loop or unloop the currently playing song.",
+        "cat": "cat",
+        "drop": false
+    },
+    "misc": {
+        "avatar": "See the Profile Picture of the user.",
+        "userbanner": "See the Banner of the user.",
+        "icon": "See the Icon of the Server.",
+        "banner": "See the Banner of the Server.",
+        "serverinfo": "Get info and stats about the Server.",
+        "dictionary": "Search  Dictionary for the word",
+        "sinpe": "Snipe the last deleted message.",
+        "esnipe": "Snipe the last edited message.",
+        "cat": "cat",
+        "drop": false
+    },
+    "fun": {
+        "roll": "Roll Dice(s).",
+        "toss": "Flip a coin.",
+        "urban": "Search Urban Dictionary.",
+        "8pool": "Play 8Pool. See your Fortune or take advice.",
+        "poll": "Create a Poll.",
+        "showpoll": "Shows Result of a Poll.",
+        "meme": "Get a Meme.",
+        "eval": "Check a PS Battle Replay.",
+        "ladder": "Get PS ladder information of a user.",
+        "cat": "cat",
+        "drop": true
+    },
+    "pokedex": {
+        "dex": "Get Information of a Pokémon.",
+        "move": "Get Information of a Move.",
+        "item": "Get Information of an Item.",
+        "nature": "Get Information of a Nature.",
+        "ability": "Get Information of an Ability.",
+        "data": "Get Information of a Pokémon, Ability, Move, Item, or Nature.",
+        "learn": "Get Information of a Pokémon Learnset.",
+        "filter": "Search Pokémon based on user-inputted parameters.",
+        "weak": "Get Weakness of a Pokémon or Types.",
+        "sprite": "Get Showdown Sprite of a Pokémon.",
+        "sets": "Get Moveset of a Pokémon from Smogon.",
+        "cat": "cat",
+        "drop": true
+    },
+    "badges": {
+        "des": "View your (or someone else's) current Gym Badges of the server.",
+        "Syntax": "`{prefix}badges {user}`",
+        "Uses": "{prefix}badges\n{prefix}badges @Sayan",
+        "footer": "Argument in {} are Optional argument and in [] are required.",
+        "cat": "com"
+    },
+    "gyms": {
+        "des": "View all the gyms with their leaders of the server.",
+        "Syntax": "`{prefix}gyms`",
+        "footer": "Argument in {} are Optional argument and in [] are required.",
+        "cat": "com"
+    },
+    "sbadges": {
+        "des": "View all the badges available to the server.",
+        "Syntax": "`{prefix}sbadges`",
+        "Aliases": "sbadges, serverbadges",
+        "footer": "Argument in {} are Optional argument and in [] are required.",
+        "cat": "com"
+    },
+    "glrole": {
+        "des": "Set the Gym Leader role of the server. Members with this role can award or revoke badges.",
+        "Syntax": "`{prefix}glrole [role]`",
+        "Aliases": "glrole, leaderrole",
+        "Uses": "{prefix}glrole @gymleaders",
+        "footer": "Argument in {} are Optional argument and in [] are required.",
+        "cat": "com"
+    },
+    "elrole": {
+        "des": "Set the Elite role of the server. Members with this role can add or remove elite streaks.",
+        "Syntax": "`{prefix}glrole [role]`",
+        "Aliases": "elrole, eliterole",
+        "Uses": "{prefix}elrole @elites",
+        "footer": "Argument in {} are Optional argument and in [] are required.",
+        "cat": "com"
+    },
+    "badgen": {
+        "des": "Create a new badge for the server.",
+        "Syntax": "`{prefix}badgen [badge name] [symbol]`\nSymbol can be an emoji or text. Recommended to use Emojis.",
+        "Aliases": "badgen, badgenew",
+        "Uses": "{prefix}badgen Steel 🔧",
+        "footer": "Argument in {} are Optional argument and in [] are required.",
+        "cat": "com"
+    },
+    "leaderadd": {
+        "des": "Add Gym Leaders for the server, so other members can view them.\nMust have added the Badge first using `badgen`.",
+        "Syntax": "`{prefix}leaderadd [user] [badge name]`",
+        "Aliases": "leada, leaderadd",
+        "Uses": "{prefix}leada @Sayan Steel",
+        "footer": "Argument in {} are Optional argument and in [] are required.",
+        "cat": "com"
+    },
+    "leaderremove": {
+        "des": "Remove a previously added Gym Leader using `leaderadd`.",
+        "Syntax": "`{prefix}leaderremove [user] [badge name]`",
+        "Aliases": "leadr, leaderremove",
+        "Uses": "{prefix}leadr @Sayan Steel",
+        "footer": "Argument in {} are Optional argument and in [] are required.",
+        "cat": "com"
+    },
+    "award": {
+        "des": "Award a Gym Badge to a Member. The command user must have any of the Gym Leader role or Manage Server Permission. If you are a Gym Leader, you don't have to mention the `badge`. It will add automatically",
+        "Syntax": "`{prefix}award [member] {badge}`",
+        "Aliases": "aw, award, badgea",
+        "Uses": "{prefix}award @Sayan\n{prefix}award @Sayan Water",
+        "footer": "Argument in {} are Optional argument and in [] are required.",
+        "cat": "com"
+    },
+    "revoke": {
+        "des": "Remove a Gym Badge from a Member added previously. The command user must have any of the Gym Leader role or Manage Server Permission.",
+        "Syntax": "`{prefix}revoke [member] [badge]`",
+        "Aliases": "rv, revoke",
+        "Uses": "{prefix}revoke @Sayan Water",
+        "footer": "Argument in {} are Optional argument and in [] are required.",
+        "cat": "com"
+    },
+    "badgelb": {
+        "des": "View the Badge Leaderboard of the server. Shows top 10 Members with most badges.",
+        "Syntax": "`{prefix}badgelb`",
+        "Uses": "{prefix}badgelb",
+        "footer": "Argument in {} are Optional argument and in [] are required.",
+        "cat": "com"
+    },
+    "streaka": {
+        "des": "Increase Elite Streak of a Member by 1. The command user must have any of the Elite role or Manage Server Permission.",
+        "Syntax": "`{prefix}streaka [member]`",
+        "Aliases": "streaka, streakadd",
+        "Uses": "{prefix}streaka @Sayan",
+        "footer": "Argument in {} are Optional argument and in [] are required.",
+        "cat": "com"
+    },
+    "streakr": {
+        "des": "Remove all the Elite Streak gained by the Member. The command user must have any of the Elite role or Manage Server Permission.",
+        "Syntax": "`{prefix}streakr [member]`",
+        "Aliases": "streakr, streakremove",
+        "Uses": "{prefix}streakr [member]",
+        "footer": "Argument in {} are Optional argument and in [] are required.",
+        "cat": "com"
+    },
+    "badgereset": {
+        "des": "Reset the whole Badge System for the server. Member's Profile will be resetted, Gl and El Roles will be resetted, Gym Leaders will be resetted etc.",
+        "Syntax": "`{prefix}badgereset`",
+        "Aliases": "bdrs, badgereset",
+        "Uses": "{prefix}bdrs",
+        "footer": "Argument in {} are Optional argument and in [] are required.",
+        "cat": "com"
+    },
+    "gg": {
+        "des": "A basic text based Guessing Game. Predict a number between the range, if you guessed wrong, I will tell you weather to guess Higher or Lower",
+        "Syntax": "`{prefix}gg`",
+        "Aliases": "gg, guessing-game, guessinggame",
+        "Uses": "{prefix}gg",
+        "footer": "Argument in {} are Optional argument and in [] are required.",
+        "cat": "com"
+    },
+    "tic-tac-toe": {
+        "des": "Play Tic Tac Toe with a server member. If no server member is available, you can play with me too, but it will be hard to defeat me.",
+        "Syntax": "`{prefix}tic-tac-toe {member}`",
+        "Aliases": "ttt, tic-tac-toe, tictactoe",
+        "Uses": "{prefix}ttt @Sayan\n{prefix}ttt",
+        "footer": "Argument in {} are Optional argument and in [] are required.",
+        "cat": "com"
+    },
+    "rock-paper-scissors": {
+        "des": "Play Rock Paper Scissors with me.",
+        "Syntax": "`{prefix}rps`",
+        "Aliases": "rps, rock-paper-scissors",
+        "Uses": "{prefix}rps",
+        "footer": "Argument in {} are Optional argument and in [] are required.",
+        "cat": "com"
+    },
+    "dex": {
+        "des": "Get Information about a Pokemon.",
+        "Syntax": "`{prefix}dex [pokemon]`",
+        "Aliases": "mon, dex",
+        "Uses": "{prefix}dex charizard\n{prefix}mon zard",
+        "footer": "Argument in {} are Optional argument and in [] are required.",
+        "cat": "com"
+    },
+    "move": {
+        "des": "Get Information about a Move.",
+        "Syntax": "`{prefix}move [move]`",
+        "Uses": "{prefix}move Fire Blast\n{prefix}move gmax wildfire",
+        "footer": "Argument in {} are Optional argument and in [] are required.",
+        "cat": "com"
+    },
+    "item": {
+        "des": "Get Information about an Item.",
+        "Syntax": "`{prefix}item [item]`",
+        "Uses": "{prefix}item Focus Sash\n{prefix}item cb",
+        "footer": "Argument in {} are Optional argument and in [] are required.",
+        "cat": "com"
+    },
+    "nature": {
+        "des": "Get Information about a Nature.",
+        "Syntax": "`{prefix}nature [nature]`",
+        "Uses": "{prefix}nature Brave\n{prefix}nature Adamant",
+        "footer": "Argument in {} are Optional argument and in [] are required.",
+        "cat": "com"
+    },
+    "ability": {
+        "des": "Get Information about an Ability.",
+        "Syntax": "`{prefix}ability [ability]`",
+        "Uses": "{prefix}ability Blaze\n{prefix}item Moody",
+        "footer": "Argument in {} are Optional argument and in [] are required.",
+        "cat": "com"
+    },
+    "data": {
+        "des": "Get Information of a Pokémon, Ability, Move, Item, or Nature.",
+        "Syntax": "`{prefix}data [query]`",
+        "Aliases": "dt, data",
+        "Uses": "{prefix}dt mmx\n{prefix}dt eq",
+        "footer": "Argument in {} are Optional argument and in [] are required.",
+        "cat": "com"
+    },
+    "learn": {
+        "des": "Get Information of a Pokémon Learnset, add optional move to show how that Pokémon learns that move.",
+        "Syntax": "`{prefix}learn [pokemon] {move}`",
+        "Aliases": "learn, learnset",
+        "Uses": "{prefix}learn Heatran\n{prefix}learn Mew thunder wave",
+        "footer": "Argument in {} are Optional argument and in [] are required.",
+        "cat": "com"
+    },
+    "filter": {
+        "des": "Search Pokémon based on user-inputted parameters.",
+        "Syntax": "`{prefix}filter [parameter 1], {parameter 2}, {parameter 3}...`",
+        "Parameters": "**hp/hitpoints:** `hp=100 or hp>100 or hp<100`\n**atk/attack:** `atk=100 or atk>100 or atk<100`\n**def/defense:** `def=100 or def>100 or def<100`\n**spa/specialattack:** `spa=100 or spa>100 or spa<100`\n**spd/specialdefense:** `spd=100 or spd>100 or spd<100`\n**spe/speed:** `spe=100 or spe>100 or spe<100`\n**Ability:** `ability=flash fire`\n**Move:** `move=lava plume`\n**Type:** `type=fire or type=fire; steel`\nFor multiple value in type or move use parameter multiple times or separated by a `;`",
+        "footer": "Argument in {} are Optional argument and in [] are required.",
+        "cat": "com"
+    },
+    "weak": {
+        "des": "Provides a Pokemon's or a type combination's resistances, weaknesses, and immunities, ignoring abilities. Limited to two types maximum and one type minimum.",
+        "Syntax": "`{prefix}weak [pokemon]`\n`{prefix}weak [type 1] {type 2}",
+        "Aliases": "weak, weakness",
+        "Uses": "{prefix}weak Heatran\n{prefix}weak fire steel",
+        "footer": "Argument in {} are Optional argument and in [] are required.",
+        "cat": "com"
+    },
+    "sprite": {
+        "des": "Image link of a Pokémon. Uses PokemonShowdown's sprite library.",
+        "Syntax": "`{prefix}sprite [pokemon] {filters}`",
+        "Uses": "{prefix}sprite Heatran\n{prefix}sprite Mew gen4,shiny",
+        "Filters": "**shiny:** Enables shiny variant.\n**back:** Enables back variant.\n**afd:** Enables April Fool's Day sprites.\n**gen:** Pokémon generation to parse with.",
+        "footer": "Argument in {} are Optional argument and in [] are required.",
+        "cat": "com"
+    },
+    "sets": {
+        "des": "Get MoveSet of a Pokémon of preferred Generation and format from smogon. Default to Generation 8 if no generation is passed",
+        "Syntax": "`{prefix}sets [pokemon] {gen}`\nAll generations available from RB(Gen 1) to SS(Gen 8)",
+        "Aliases": "sets, moveset, smogon",
+        "Uses": "{prefix}sets Heatran\n{prefix}sets Mew gen6\n{prefix}sets excadrill gen 5\n{prefix}sets scizor sm",
+        "footer": "Argument in {} are Optional argument and in [] are required.",
+        "cat": "com"
+    },
+    "roll": {
+        "des": "Roll Dice(s).",
+        "Syntax": "`{prefix}roll {number of dices}`",
+        "Uses": "{prefix}roll\n{prefix}roll 4",
+        "footer": "Argument in {} are Optional argument and in [] are required.",
+        "cat": "com"
+    },
+    "toss": {
+        "des": "Flip a coin.",
+        "Syntax": "`{prefix}toss`",
+        "Aliases": "toss, flip, coinflip",
+        "footer": "Argument in {} are Optional argument and in [] are required.",
+        "cat": "com"
+    },
+    "urban": {
+        "des": "Search a word in Urban Dictionary. If you want meanings of the word, use the `dict` command instead.",
+        "Syntax": "`{prefix}urban [word]`",
+        "Uses": "{prefix}urban anime",
+        "footer": "Argument in {} are Optional argument and in [] are required.",
+        "cat": "com"
+    },
+    "8pool": {
+        "des": "Play 8Pool. See your Fortune or take advice. Ask for a Yes/No answer type question.",
+        "Syntax": "`{prefix}8pool [question]",
+        "Aliases": "8p, 8pool",
+        "Uses": "{prefix}8p The World is Flat?",
+        "footer": "Argument in {} are Optional argument and in [] are required.",
+        "cat": "com"
+    },
+    "poll": {
+        "des": "Create a Vote Poll with a question and options upto 20.",
+        "Syntax": "`{prefix}poll [question] // [option 1], [option 2], {option 3}...`",
+        "Uses": "{preix}poll I am the best? // Yes, No\nAtleast 2 options are needed for a valid Poll.",
+        "footer": "Argument in {} are Optional argument and in [] are required.",
+        "cat": "com"
+    },
+    "showpoll": {
+        "des": "Shows Result of a Previously Created Poll.",
+        "Syntax": "`{prefix}showpoll [message ID]`\n`{prefix}showpoll [message link]`",
+        "Aliases": "sp, showpoll, pollshow",
+        "Uses": "Message ID works only if the Poll is on same channel of using the command. For other Channels use Message Link.",
+        "footer": "Argument in {} are Optional argument and in [] are required.",
+        "cat": "com"
+    },
+    "meme": {
+        "des": "Get a random Meme from r/Memes subreddit",
+        "Syntax": "`{prefix}meme`",
+        "footer": "Argument in {} are Optional argument and in [] are required.",
+        "cat": "com"
+    },
+    "eval": {
+        "des": "Evaluate a Pokémon Showdown Battle Replay. Get it's Format, Users, Winner and Ladder Update in a ranked battle.",
+        "Syntax": "`{prefix}eval [reply link]`",
+        "Aliases": "eval, evaluate",
+        "footer": "Argument in {} are Optional argument and in [] are required.",
+        "cat": "com"
+    },
+    "ladder": {
+        "des": "Get all the ladder records of a user from Pokémon Showdown.",
+        "Syntax": "`{prefix}ladder [username]`",
+        "Aliases": "ladder, rankings",
+        "footer": "Argument in {} are Optional argument and in [] are required.",
+        "cat": "com"
+    }
+}
