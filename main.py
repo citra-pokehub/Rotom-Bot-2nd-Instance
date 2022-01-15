@@ -6,13 +6,20 @@ from replit import db
 import asyncio
 
 def get_prefix(client, message):
+    """
+    get bot prefix from database and set bot prefix for guild/server
 
+    :param client: Discord.py client
+    :param message: message sent in a server channel
+    :return: bot prefix
+    """
     if isinstance(message.channel, discord.channel.DMChannel):
         return "."
         
     guild = db["prefixes"]
     ret = guild.get(str(message.guild.id), ".")
 
+    # if guild id not found in guilds list, set bot prefix to . and update database
     if str(message.guild.id) not in guild:
         guild[str(message.guild.id)] = "."
 
@@ -20,10 +27,9 @@ def get_prefix(client, message):
 
     return ret
 
-
+# initialize bot
 prefix = get_prefix
 intents = discord.Intents.all()
-
 client = commands.Bot(command_prefix=prefix,
                     intents=intents,
                     case_insensitive=True)
@@ -31,14 +37,15 @@ client = commands.Bot(command_prefix=prefix,
 
 @client.event
 async def on_ready():
-
+    """ set up bot after login into discord servers successful """
+    
     print(
         f"Bot is Ready.\nLogged in as {client.user.name}\n---------------------"
     )
 
     client.remove_command("help")
-    # db["grunt_timers"] = {}
 
+    # load cogs from directories
     for filename in os.listdir("./cogs"):
         if filename.endswith(".py"):
             client.load_extension(f"cogs.{filename[:-3]}")
@@ -62,6 +69,11 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
+    """
+    execute function whenever someone sends a message
+
+    :param message: message string
+    """
     if message.author == client.user:
         return
 
@@ -79,6 +91,11 @@ async def on_message(message):
 
 @client.event
 async def on_guild_join(guild):
+    """
+    add guild id to db whenever bot joins a new server/guild
+
+    :param guild: guild/server object
+    """
     prefixes = db["prefixes"]
     prefixes[str(guild.id)] = "."
     db["prefixes"] = prefixes
@@ -86,6 +103,11 @@ async def on_guild_join(guild):
 
 @client.event
 async def on_guild_leave(guild):
+    """
+    remove guild id from db whenever bot leaves a server/guild
+
+    :param guild: guild/server object
+    """
     prefixes = db["prefixes"]
     del prefixes[str(guild.id)]
     db["prefixes"] = prefixes
@@ -93,7 +115,12 @@ async def on_guild_leave(guild):
 
 @client.event
 async def on_command_error(ctx, error):
+    """
+    send error as message is bot command produces an error
 
+    :param ctx: discord.py command context
+    :param error: discord.py error object
+    """
     if isinstance(error, commands.CommandNotFound):
         pass
     elif isinstance(error, discord.errors.NotFound):
@@ -110,6 +137,11 @@ async def on_command_error(ctx, error):
 @client.command()
 @commands.is_owner()
 async def reload(ctx):
+    """
+    reload bot cogs/extensions
+
+    :param ctx: discord.py command context
+    """
     for filename in os.listdir("./cogs"):
         if filename.endswith(".py"):
             client.unload_extension(f"cogs.{filename[:-3]}")

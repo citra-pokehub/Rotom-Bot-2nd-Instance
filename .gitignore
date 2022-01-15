@@ -1,0 +1,12 @@
+# folders to not include 
+__pycache__
+.vscode
+sets
+data
+snipe
+discord
+
+# files to not include 
+pyproject.toml
+poetry.lock
+manage.json
